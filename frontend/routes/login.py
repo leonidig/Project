@@ -68,3 +68,7 @@ def login_post():
             else:
                 flash("Wrong nickname")
     return render_template('form_template.html', form=form)
+
+@app.get("/base")
+def base():
+    return render_template('__base.html')
