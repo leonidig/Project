@@ -247,7 +247,7 @@ nav.active .nav-bar .nav-logo a {
 }
 
 body.dark .search-field input{
-    color: var(--nav-color)
+    color: var(--text-color)
 }
 
 .search-field i{
