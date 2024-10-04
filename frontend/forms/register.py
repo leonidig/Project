@@ -12,7 +12,6 @@ from wtforms.validators import (
 )
 
 class RegisterForm(FlaskForm):
-    nickname = StringField('Nickname', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
