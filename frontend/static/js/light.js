@@ -1,44 +1,58 @@
 const body = document.querySelector("body"),
       nav = document.querySelector("nav"),
-      mode_toggle = document.querySelector(".dark-light"),
-      search_toggle = document.querySelector(".searchToggle"),
-      search_field = document.querySelector(".search-field"),
-      sidebar_open = document.querySelector(".sidebar-open"),
-      sidebar_close = document.querySelector(".sidebar-close");
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      searchField = document.querySelector(".search-field"),
+      sidebarOpen = document.querySelector(".sidebar-open"),
+      sidebarClose = document.querySelector(".sidebar-close"),
+      dropbtn = document.querySelector('.dropbtn'),
+      dropdownContent = document.querySelector('.dropdown-content');
 
-let get_mode = localStorage.getItem("mode");
-if (get_mode && get_mode === "dark-mode") {
+let getMode = localStorage.getItem("mode");
+if (getMode && getMode === "dark-mode") {
   body.classList.add("dark");
+  toggleDarkMode(true);
 }
 
-mode_toggle.addEventListener("click", () => {
-  mode_toggle.classList.toggle("active");
+modeToggle.addEventListener("click", () => {
+  modeToggle.classList.toggle("active");
   body.classList.toggle("dark");
 
-  if (!body.classList.contains("dark")) {
+  const isDarkMode = body.classList.contains("dark");
+  toggleDarkMode(isDarkMode);
+
+  if (!isDarkMode) {
     localStorage.setItem("mode", "light-mode");
   } else {
     localStorage.setItem("mode", "dark-mode");
   }
 });
 
-search_toggle.addEventListener("click", () => {
-  search_toggle.classList.toggle("active");
-  search_field.classList.toggle("active");
+function toggleDarkMode(isDark) {
+  const elementsToToggle = document.querySelectorAll('#hero, #products, .product, #faq, #contact, #contact form input, #contact form textarea, #contact form button');
+  
+  elementsToToggle.forEach(el => {
+    el.classList.toggle('dark', isDark);
+  });
+}
+
+searchToggle.addEventListener("click", () => {
+  searchToggle.classList.toggle("active");
+  searchField.classList.toggle("active");
 });
 
-sidebar_open.addEventListener("click", () => {
+sidebarOpen.addEventListener("click", () => {
   nav.classList.add("active");
 });
 
-sidebar_close.addEventListener("click", () => {
+sidebarClose.addEventListener("click", () => {
   nav.classList.remove("active");
 });
 
 body.addEventListener("click", (e) => {
-  let click_element = e.target;
+  let clickElement = e.target;
 
-  if (!click_element.classList.contains("sidebar-open") && !click_element.closest(".menu")) {
+  if (!clickElement.closest(".sidebar-open") && !clickElement.closest(".menu")) {
     nav.classList.remove("active");
   }
 });

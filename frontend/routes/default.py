@@ -14,3 +14,7 @@ def index():
 
     nickname = email.split("@")[0]
     return render_template("index.html", nickname=nickname) 
+
+@app.get("/site")
+def site():
+    return render_template("site.html")

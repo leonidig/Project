@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/css/light.css">
+    <link rel="stylesheet" href="/static/css/site.css">
+    <link rel="stylesheet" href="/static/css/nav.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <div class="menu-logo-container">
+                <div class="darkLight-searchBox">
+                    <button id="toggleButton" class="menu-button">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                </div>
+            </div>
+            <i class='bx bx-menu sidebar-open'></i>
+            <span class="logo nav-logo"><a href="#">WORKSPACE</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">WORKSPACE</a></span>
+                    <i class='bx bx-x sidebar-close'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a class="nav-link disabled" style="color: #090909; opacity: 1;" href="#">👤 {{ nickname }}</a></li>  
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <a href="" class="nav-link"><b>Девайси користувачів</b></a>
+            <a href="" class="nav-link"><b></b></a>
+            <a href="" class="nav-link"><b>Devices</b></a>
+        </div>
+    </div>
+    
+    <div id="gearPopup" class="gear-popup">
+        <div class="gear-popup-content">
+            <a href="" class="nav-link">Реєстрація</a>
+            <a href="" class="nav-link">аккаунт</a>
+        </div>
+    </div>    
+    <section id="hero">
+        <div class="container">
+            <h1>Готові до відключень світла</h1>
+            <p>Трансформатори, повербанки та аварійні рішення для стабільного енергопостачання.</p>
+            <a href="#products" class="btn">Дізнатися більше</a>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Наші рішення</h2>
+            <div class="product">
+                <h3>Трансформатори</h3>
+                <p>Надійні рішення для вашого дому та бізнесу.</p>
+            </div>
+            <div class="product">
+                <h3>Повербанки</h3>
+                <p>Залишайтесь на зв'язку під час відключень світла.</p>
+            </div>
+            <div class="product">
+                <h3>Аварійні генератори</h3>
+                <p>Гарантоване живлення для вашого дому.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Часто задані питання</h2>
+            <div class="faq-item">
+                <h4>Як обрати трансформатор?</h4>
+                <p>Ми допоможемо підібрати обладнання залежно від ваших потреб.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Чи можна живити побутову техніку повербанком?</h4>
+                <p>Для дрібної техніки – так, для великої потрібні генератори.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Зв'язатися з нами</h2>
+            <form action="/submit_form" method="POST">
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </section>
+    <script src="/static/js/light.js"></script>
+    <script src="/static/js/nav.js"></script>
+</body>
+</html>
