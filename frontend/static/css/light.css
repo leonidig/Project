@@ -19,6 +19,8 @@
 body {
     height: 100vh;
     background-color: var(--body-color);
+    padding-top: 70px;
+    margin: 0;
 }
 
 body.dark {
@@ -143,17 +145,15 @@ nav .nav-bar .logo a {
 }
 
 .dark-light i.sun {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 }
 
 .dark-light.active i.sun {
-    opacity: 1;
+    display: block;
 }
 
 .dark-light.active i.moon {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 }
 
 .searchToggle.active i.search {

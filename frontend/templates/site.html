@@ -4,22 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="/static/css/light.css">
     <link rel="stylesheet" href="/static/css/site.css">
-    <link rel="stylesheet" href="/static/css/nav.css">
 </head>
 <body>
     <nav>
         <div class="nav-bar">
-            <div class="menu-logo-container">
-                <div class="darkLight-searchBox">
-                    <button id="toggleButton" class="menu-button">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </button>
-                </div>
-            </div>
             <i class='bx bx-menu sidebar-open'></i>
             <span class="logo nav-logo"><a href="#">WORKSPACE</a></span>
 
@@ -51,66 +42,44 @@
                         <i class='bx bx-search search'></i>
                     </div>
                     <div class="search-field">
+                        <a class='bx bx-bulb bx-flip-vertical'></a>
+                        <i class="bx bx-search search"></i>
                         <input type="text" placeholder="Search...">
-                        <i class='bx bx-search'></i>
-                    <div>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
-    <div id="sidebar" class="sidebar">
-        <div class="sidebar-content">
-            <a href="" class="nav-link"><b>Девайси користувачів</b></a>
-            <a href="" class="nav-link"><b>наші встроєні пристрої</b></a>
-            <a href="" class="nav-link"><b>інші питання</b></a>
-        </div>
-    </div>
-    
-    <div id="gearPopup" class="gear-popup">
-        <div class="gear-popup-content">
-            <a href="" class="nav-link">Реєстрація</a>
-            <a href="" class="nav-link">аккаунт</a>
-        </div>
-    </div>    
-    <section id="hero">
-        <div class="container">
-            <h1>Готові до відключень світла</h1>
-            <p>Трансформатори, повербанки та аварійні рішення для стабільного енергопостачання.</p>
-            <a href="#products" class="btn">Дізнатися більше</a>
-        </div>
-    </section>
 
-    <section id="products">
-        <div class="container">
-            <h2>Наші рішення</h2>
-            <div class="product">
-                <h3>Трансформатори</h3>
-                <p>Надійні рішення для вашого дому та бізнесу.</p>
-            </div>
-            <div class="product">
-                <h3>Повербанки</h3>
-                <p>Залишайтесь на зв'язку під час відключень світла.</p>
-            </div>
-            <div class="product">
-                <h3>Аварійні генератори</h3>
-                <p>Гарантоване живлення для вашого дому.</p>
-            </div>
-        </div>
-    </section>
+    <h1>...</h1>
 
-    <section id="faq">
-        <div class="container">
-            <h2>Часто задані питання</h2>
-            <div class="faq-item">
-                <h4>Як обрати трансформатор?</h4>
-                <p>Ми допоможемо підібрати обладнання залежно від ваших потреб.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Чи можна живити побутову техніку повербанком?</h4>
-                <p>Для дрібної техніки – так, для великої потрібні генератори.</p>
-            </div>
+    <details>
+        <h2>Наші рішення</h2>
+        <summary>Трансформатори</summary>
+        <p>Надійні рішення для вашого дому та бізнесу.</p>
+        <summary>Повербанки</summary>
+        <p>Залишайтесь на зв'язку під час відключень світла.</p>
+        <summary>Аварійні генератори</summary>
+        <p>Гарантоване живлення для вашого дому.</p>
+        <summary>Трансформатори</summary>
+        <h2>Часто задані питання</h2>
+        <div class="faq-item">
+            <h4>Як обрати трансформатор?</h4>
+            <p>Ми допоможемо підібрати обладнання залежно від ваших потреб.</p>
         </div>
-    </section>
+        <div class="faq-item">
+            <h4>Чи можна живити побутову техніку повербанком?</h4>
+            <p>Для дрібної техніки – так, для великої потрібні генератори.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Як обрати трансформатор?</h4>
+            <p>Ми допоможемо підібрати обладнання залежно від ваших потреб.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Чи можна живити побутову техніку повербанком?</h4>
+            <p>Для дрібної техніки – так, для великої потрібні генератори.</p>
+        </div>
+    </details>
 
     <section id="contact">
         <div class="container">
@@ -124,6 +93,5 @@
         </div>
     </section>
     <script src="/static/js/light.js"></script>
-    <script src="/static/js/nav.js"></script>
 </body>
 </html>

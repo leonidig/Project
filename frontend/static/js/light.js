@@ -1,6 +1,8 @@
 const body = document.querySelector("body"),
       nav = document.querySelector("nav"),
       modeToggle = document.querySelector(".dark-light"),
+      moonIcon = document.querySelector(".bx-moon"),
+      sunIcon = document.querySelector(".bx-sun"),
       searchToggle = document.querySelector(".searchToggle"),
       searchField = document.querySelector(".search-field"),
       sidebarOpen = document.querySelector(".sidebar-open"),
@@ -9,22 +11,31 @@ const body = document.querySelector("body"),
       dropdownContent = document.querySelector('.dropdown-content');
 
 let getMode = localStorage.getItem("mode");
+
 if (getMode && getMode === "dark-mode") {
   body.classList.add("dark");
   toggleDarkMode(true);
+  moonIcon.style.display = "none";
+  sunIcon.style.display = "block";
+} else {
+  moonIcon.style.display = "block";
+  sunIcon.style.display = "none";
 }
 
 modeToggle.addEventListener("click", () => {
-  modeToggle.classList.toggle("active");
   body.classList.toggle("dark");
 
   const isDarkMode = body.classList.contains("dark");
   toggleDarkMode(isDarkMode);
 
-  if (!isDarkMode) {
-    localStorage.setItem("mode", "light-mode");
-  } else {
+  if (isDarkMode) {
     localStorage.setItem("mode", "dark-mode");
+    moonIcon.style.display = "none";
+    sunIcon.style.display = "block";
+  } else {
+    localStorage.setItem("mode", "light-mode");
+    moonIcon.style.display = "block";
+    sunIcon.style.display = "none";
   }
 });
 
