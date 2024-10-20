@@ -7,8 +7,8 @@ body {
 
 .container {
     width: 80%;
-    margin: 40px auto; /* Додаємо зверху і знизу відступи */
-    padding: 0 20px; /* Відступи всередині контейнера */
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 h1, h2, h3, h4 {
@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-    margin-bottom: 15px; /* Відступи для абзаців тексту */
+    margin-bottom: 15px;
 }
 
 #hero {
@@ -43,7 +43,7 @@ p {
 
 #contact form input, #contact form textarea {
     margin-bottom: 20px;
-    padding: 15px; /* Більші відступи всередині полів */
+    padding: 15px;
     width: 100%;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -65,12 +65,11 @@ p {
     background-color: #444;
 }
 
-/* Секція details */
 details {
     width: 80%;
-    margin: 40px auto; /* Відступи, як у контейнера */
+    margin: 40px auto;
     padding: 0 20px;
-    background-color: #fff; /* Білий фон для деталів */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -95,7 +94,6 @@ details p {
     border-top: 1px solid #f2f2f2;
 }
 
-/* Відступи для FAQ елементів */
 .faq-item {
     margin-bottom: 20px;
 }
@@ -110,36 +108,33 @@ details p {
     color: #666;
 }
 
-/* Секція контактів */
 #contact {
     background-color: #fff;
     padding: 50px 0;
 }
 
-/* Відступи для заголовків і тексту */
 h1, h2, h3, h4 {
     margin-bottom: 20px;
 }
 
 nav .nav-bar {
-    padding: 0 40px; /* Додаткові відступи для навігації */
+    padding: 0 40px;
 }
 
 section {
-    margin: 40px 0; /* Простір між секціями */
+    margin: 40px 0;
 }
 
-/* Медіа-запити для мобільних пристроїв */
 @media (max-width: 790px) {
     .container {
-        width: 90%; /* Ширина контейнера для маленьких екранів */
+        width: 90%;
     }
 
     .menu {
-        padding: 20px 40px; /* Додаткові відступи всередині мобільної навігації */
+        padding: 20px 40px;
     }
 
     .nav-bar .nav-links li {
-        margin-bottom: 25px; /* Більше простору між пунктами меню */
+        margin-bottom: 25px;
     }
 }
