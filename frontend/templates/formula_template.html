@@ -1,0 +1,31 @@
+{% extends '__log.html' %}
+{% from '__helpers.html' import form_generate %}
+{% block styles %}
+<style>
+  .btn-primary {
+    background-color: red;
+    border-color: red;
+}
+  .btn-primary:hover {
+    background-color: darkred;
+    border-color: darkred;
+  }
+</style>
+{% endblock styles %}
+{% block content %}
+
+
+  {{ form_generate(form) }}
+  <div class="container">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="form-message">
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+  <a class = "btn btn-primary danger" type="button" href="/">Back</a>
+</div>
+{% endblock content %}
